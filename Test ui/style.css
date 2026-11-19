@@ -1,0 +1,1156 @@
+/* ==============================
+   GLOBAL STYLES
+================================ */
+
+:root {
+    --primary: #087e72;
+    --primary-dark: #075f57;
+    --primary-light: #e9f5f1;
+    --background: #fafbf9;
+    --white: #ffffff;
+    --text: #243b38;
+    --muted: #778782;
+    --border: #e9eeeb;
+    --accent: #e7aa61;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+.small-label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+    color: var(--primary);
+}
+
+
+/* ==============================
+   NAVBAR
+================================ */
+
+.navbar {
+    background: rgba(255,255,255,0.96);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    height: 76px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo-icon {
+    background: var(--primary);
+    color: white;
+    height: 34px;
+    width: 34px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-size: 21px;
+}
+
+.logo-highlight {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #6d7d78;
+    transition: 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: var(--primary);
+}
+
+.nav-actions {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.login-btn {
+    color: var(--text);
+}
+
+.nav-cta {
+    background: var(--primary);
+    color: white;
+    padding: 11px 19px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.nav-cta:hover,
+.primary-btn:hover,
+.cta-button:hover {
+    background: var(--primary-dark);
+}
+
+
+/* ==============================
+   HERO SECTION
+================================ */
+
+.hero {
+    background:
+        radial-gradient(ellipse at 10% 20%, #edf7f2 0%, transparent 45%),
+        #fafbf9;
+    padding: 85px 25px 90px;
+}
+
+.hero-container {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.05fr 0.85fr;
+    gap: 75px;
+    align-items: center;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+    margin-bottom: 23px;
+}
+
+.eyebrow-dot {
+    height: 8px;
+    width: 8px;
+    background: #43a88b;
+    border-radius: 50%;
+}
+
+.hero-content h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(38px, 4.5vw, 58px);
+    line-height: 1.16;
+    letter-spacing: -2.5px;
+    font-weight: 800;
+}
+
+.hero-content h1 span {
+    color: var(--primary);
+}
+
+.hero-description {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 490px;
+    margin-top: 22px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.primary-btn {
+    background: var(--primary);
+    color: white;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.primary-btn span {
+    margin-left: 10px;
+}
+
+.secondary-btn {
+    border: 1px solid #dce6e1;
+    background: white;
+    padding: 13px 19px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 42px;
+}
+
+.trust-avatars {
+    display: flex;
+}
+
+.trust-avatars span {
+    height: 34px;
+    width: 34px;
+    background: #e7eee9;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin-left: -7px;
+    font-size: 15px;
+}
+
+.trust-avatars span:first-child {
+    margin-left: 0;
+}
+
+.hero-trust strong {
+    font-size: 12px;
+}
+
+.hero-trust p {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+
+/* ==============================
+   UPLOAD CARD
+================================ */
+
+.upload-card {
+    background: white;
+    padding: 27px;
+    border: 1px solid #e9efeb;
+    border-radius: 17px;
+    box-shadow: 0 18px 55px rgba(34, 75, 59, 0.08);
+}
+
+.upload-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 23px;
+}
+
+.upload-heading h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 21px;
+    letter-spacing: -0.7px;
+    margin-top: 7px;
+}
+
+.upload-heading p {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 4px;
+}
+
+.upload-icon {
+    background: var(--primary-light);
+    color: var(--primary);
+    height: 43px;
+    width: 43px;
+    border-radius: 11px;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+}
+
+.upload-area {
+    border: 1.5px dashed #a8cfc0;
+    background: #f8fcfa;
+    border-radius: 12px;
+    padding: 29px 15px;
+    text-align: center;
+}
+
+.file-icon {
+    height: 48px;
+    width: 48px;
+    margin: auto auto 13px;
+    background: #e4f3ec;
+    color: var(--primary);
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    font-size: 24px;
+}
+
+.upload-area h3 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.upload-area p {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 5px;
+}
+
+.file-formats {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.file-formats span {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 4px 10px;
+    font-size: 9px;
+    border-radius: 5px;
+    color: #71817a;
+    font-weight: 700;
+}
+
+.browse-btn {
+    display: inline-block;
+    margin-top: 17px;
+    background: var(--primary);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.upload-security {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 16px;
+    font-size: 10px;
+    color: #778782;
+}
+
+.upload-security span {
+    color: var(--primary);
+    font-size: 15px;
+}
+
+.upload-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 21px 0;
+    color: #a1aaa6;
+    font-size: 10px;
+}
+
+.upload-divider::before,
+.upload-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+.manual-search {
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #99a39f;
+    font-size: 12px;
+}
+
+.search-icon {
+    font-size: 22px;
+}
+
+.search-arrow {
+    margin-left: auto;
+    color: var(--primary);
+}
+
+
+/* ==============================
+   TRUST STRIP
+================================ */
+
+.trust-strip {
+    background: white;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.trust-strip-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 26px 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.strip-icon {
+    height: 39px;
+    width: 39px;
+    border-radius: 10px;
+    background: var(--primary-light);
+    color: var(--primary);
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.trust-item strong {
+    font-size: 12px;
+}
+
+.trust-item p {
+    font-size: 10px;
+    color: var(--muted);
+}
+
+
+/* ==============================
+   HOW IT WORKS
+================================ */
+
+.how-section {
+    max-width: 1150px;
+    padding: 90px 25px;
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2,
+.pharmacy-heading h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 32px;
+    letter-spacing: -1.3px;
+    margin-top: 9px;
+}
+
+.section-heading p,
+.pharmacy-heading p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.step-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 25px;
+    transition: 0.25s;
+}
+
+.step-card:hover,
+.pharmacy-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(35, 73, 57, 0.07);
+}
+
+.step-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.step-number {
+    color: #a0b1a8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.step-symbol {
+    background: var(--primary-light);
+    color: var(--primary);
+    height: 45px;
+    width: 45px;
+    border-radius: 11px;
+    display: grid;
+    place-items: center;
+    font-size: 23px;
+}
+
+.step-card h3 {
+    font-size: 15px;
+    margin-bottom: 9px;
+}
+
+.step-card p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* ==============================
+   MEDICINE COMPARISON
+================================ */
+
+.medicine-section {
+    background: #f0f6f2;
+    padding: 85px 25px;
+}
+
+.medicine-container {
+    max-width: 950px;
+    margin: auto;
+}
+
+.medicine-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.medicine-heading h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 33px;
+    line-height: 1.3;
+    letter-spacing: -1.2px;
+    margin-top: 9px;
+}
+
+.medicine-heading p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 9px;
+}
+
+.demo-label {
+    background: white;
+    color: var(--primary);
+    border: 1px solid #d8e9df;
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.comparison-card {
+    background: white;
+    border: 1px solid #e5ece7;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 12px 35px rgba(36, 71, 54, 0.05);
+}
+
+.original-medicine {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding: 8px 0 23px;
+}
+
+.medicine-image,
+.alternative-icon {
+    height: 57px;
+    width: 57px;
+    background: #f0f5f2;
+    display: grid;
+    place-items: center;
+    border-radius: 11px;
+    font-size: 26px;
+}
+
+.medicine-info {
+    flex: 1;
+}
+
+.medicine-type {
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: #929f99;
+    font-weight: 800;
+}
+
+.medicine-info h3,
+.alternative-details h3 {
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.medicine-info p,
+.alternative-details p {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.pack-info {
+    font-size: 10px;
+    color: #8a9891;
+}
+
+.medicine-price {
+    text-align: right;
+}
+
+.medicine-price span,
+.alternative-price span {
+    display: block;
+    font-size: 10px;
+    color: var(--muted);
+}
+
+.medicine-price strong {
+    font-size: 23px;
+}
+
+.comparison-divider {
+    border-top: 1px solid var(--border);
+    padding: 19px 0 10px;
+    font-size: 10px;
+    font-weight: 800;
+    color: #85958d;
+    letter-spacing: 1px;
+}
+
+.alternative-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 13px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.alternative-details {
+    flex: 1;
+}
+
+.match-tag {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 9px;
+    color: var(--primary);
+    background: var(--primary-light);
+    padding: 3px 7px;
+    border-radius: 4px;
+}
+
+.alternative-price {
+    text-align: right;
+}
+
+.alternative-price strong {
+    font-size: 19px;
+    display: block;
+}
+
+.saving-tag {
+    background: #e9f5ec;
+    color: #278253;
+    padding: 7px 10px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.comparison-note {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+    color: #8b9791;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   PHARMACY SECTION
+================================ */
+
+.pharmacy-section {
+    padding: 90px 25px;
+}
+
+.pharmacy-container {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.pharmacy-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 32px;
+}
+
+.view-all {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--primary);
+    padding-bottom: 8px;
+}
+
+.pharmacy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 21px;
+}
+
+.pharmacy-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    overflow: hidden;
+    transition: 0.25s;
+}
+
+.pharmacy-picture {
+    height: 165px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.pharmacy-one {
+    background-image: url('https://images.unsplash.com/photo-1576602976047-174e57a47881?w=700');
+}
+
+.pharmacy-two {
+    background-image: url('https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=700');
+}
+
+.pharmacy-three {
+    background-image: url('https://images.unsplash.com/photo-1585435557343-3b092031a831?w=700');
+}
+
+.store-badge {
+    position: absolute;
+    bottom: 12px;
+    left: 13px;
+    background: white;
+    padding: 5px 9px;
+    border-radius: 5px;
+    color: var(--primary);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+}
+
+.pharmacy-details {
+    padding: 17px;
+}
+
+.store-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.store-title h3 {
+    font-size: 14px;
+}
+
+.store-title span {
+    font-size: 11px;
+    color: #b47b29;
+    font-weight: 800;
+}
+
+.pharmacy-details > p {
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 8px;
+}
+
+.store-footer {
+    border-top: 1px solid var(--border);
+    margin-top: 16px;
+    padding-top: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.available {
+    font-size: 9px;
+    color: #798a82;
+}
+
+.store-arrow {
+    color: var(--primary);
+    font-size: 18px;
+}
+
+
+/* ==============================
+   FINAL CTA
+================================ */
+
+.cta-section {
+    margin: 0 25px 75px;
+    background: #eaf4ef;
+    border-radius: 17px;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: auto;
+}
+
+.cta-icon {
+    background: white;
+    color: var(--primary);
+    display: grid;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    margin: auto auto 15px;
+    border-radius: 12px;
+    font-size: 23px;
+}
+
+.cta-content h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 29px;
+    letter-spacing: -1px;
+}
+
+.cta-content p {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 10px 0 22px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ==============================
+   FOOTER
+================================ */
+
+.footer {
+    background: white;
+    border-top: 1px solid var(--border);
+    padding: 48px 25px 20px;
+}
+
+.footer-container {
+    max-width: 1150px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 35px;
+}
+
+.footer-brand {
+    max-width: 300px;
+}
+
+.footer-brand p {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 13px;
+    line-height: 1.8;
+}
+
+.footer-links {
+    display: flex;
+    gap: 85px;
+}
+
+.footer-links div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links strong {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+.footer-bottom {
+    max-width: 1150px;
+    margin: auto;
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: #929e98;
+    font-size: 10px;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero-container {
+        gap: 35px;
+    }
+
+    .hero-content h1 {
+        font-size: 43px;
+    }
+
+    .pharmacy-grid {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .nav-container {
+        height: 65px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-actions {
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 55px 18px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .upload-card {
+        padding: 20px;
+    }
+
+    .trust-strip-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px;
+    }
+
+    .how-section,
+    .pharmacy-section {
+        padding: 65px 18px;
+    }
+
+    .steps-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2,
+    .pharmacy-heading h2 {
+        font-size: 26px;
+    }
+
+    .medicine-section {
+        padding: 65px 18px;
+    }
+
+    .medicine-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .medicine-heading h2 {
+        font-size: 28px;
+    }
+
+    .comparison-card {
+        padding: 16px;
+    }
+
+    .alternative-row {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .alternative-details {
+        min-width: 120px;
+    }
+
+    .alternative-price {
+        margin-left: auto;
+    }
+
+    .saving-tag {
+        margin-left: auto;
+    }
+
+    .pharmacy-heading {
+        align-items: flex-start;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .pharmacy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pharmacy-picture {
+        height: 190px;
+    }
+
+    .cta-section {
+        margin: 0 18px 50px;
+        padding: 45px 18px;
+    }
+
+    .cta-content h2 {
+        font-size: 24px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .footer-links {
+        gap: 55px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .nav-cta {
+        padding: 9px 11px;
+        font-size: 11px;
+    }
+
+    .login-btn {
+        font-size: 11px;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .hero-buttons {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .medicine-image,
+    .alternative-icon {
+        width: 43px;
+        height: 43px;
+    }
+}
